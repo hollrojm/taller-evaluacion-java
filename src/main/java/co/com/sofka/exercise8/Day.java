@@ -4,14 +4,16 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public final class Day {
+    Scanner scanner = new Scanner(System.in);
+    private String day = scanner.nextLine().toLowerCase();
+
     public Day() {
+        this.day = day;
     }
     public void workingDay() {
-        Scanner scanner = new Scanner(System.in);
-
         try {
             System.out.print("Introduzca un dia de la semana: ");
-            String day = scanner.nextLine().toLowerCase();
+
 
 
             switch (day) {
