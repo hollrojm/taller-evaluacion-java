@@ -1,5 +1,6 @@
 package co.com.sofka.exercise1;
 
+
 public class Exercise1 {
     double number1;
     double number2;
