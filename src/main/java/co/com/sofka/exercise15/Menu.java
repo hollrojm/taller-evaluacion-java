@@ -34,23 +34,11 @@ public final class Menu {
     public void optionMenu() {
         switch (this.option) {
             case 1:
-                getMenu();
-                break;
             case 2:
-                getMenu();
-                break;
             case 4:
-                getMenu();
-                break;
             case 3:
-                getMenu();
-                break;
             case 5:
-                getMenu();
-                break;
             case 6:
-                getMenu();
-                break;
             case 7:
                 getMenu();
                 break;

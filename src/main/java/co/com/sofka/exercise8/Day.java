@@ -4,17 +4,14 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public final class Day {
-    Scanner scanner = new Scanner(System.in);
-    private String day = scanner.nextLine().toLowerCase();
 
-    public Day() {
+    private String day;
+
+    public Day(String day) {
         this.day = day;
     }
+
     public void workingDay() {
-        try {
-            System.out.print("Introduzca un dia de la semana: ");
-
-
 
             switch (day) {
                 case "lunes":
@@ -31,9 +28,5 @@ public final class Day {
                     System.out.println("Introduce un dia valido!!!");
 
             }
-
-        } catch (Exception e) {
-            System.out.println("Introduce un dia valido!!!!");
-        }
     }
 }

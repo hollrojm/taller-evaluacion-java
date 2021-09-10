@@ -7,6 +7,9 @@ import co.com.sofka.exercise14.Pairs;
 import co.com.sofka.exercise15.Menu;
 import co.com.sofka.exercise16.Person;
 import co.com.sofka.exercise17.ExeElectrodomestico;
+import co.com.sofka.exercise18.Movie;
+import co.com.sofka.exercise18.Serie;
+import co.com.sofka.exercise18.VideoGame;
 import co.com.sofka.exercise2.Exercise2;
 import co.com.sofka.exercise3.CircleArea;
 import co.com.sofka.exercise4.Product;
@@ -23,8 +26,9 @@ public final class Main {
 
     public static void main(String[] args) {
         Scanner ScannerOpt = new Scanner(System.in);
-
-        System.out.print("Ingresa el ejercicio a validar (1 al 18): ");
+        boolean exit = false;
+        do {
+        System.out.println("Ingresa el ejercicio a validar (1 al 18): ");
         int option = ScannerOpt.nextInt();
 
             switch (option) {
@@ -34,7 +38,9 @@ public final class Main {
                     break;
                 case 2:
                     Scanner scanner1 = new Scanner(System.in);
+                    System.out.print("Ingrese el primer numero: ");
                     double number1 = scanner1.nextDouble();
+                    System.out.print("Ingrese el segundo numero: ");
                     double number2 = scanner1.nextDouble();
                     Exercise2 exercise2 = new Exercise2(number1, number2);
                     System.out.println(exercise2.compareNumber());
@@ -46,8 +52,6 @@ public final class Main {
                     radio = Double.parseDouble(scanner2.nextLine());
                     CircleArea circleArea = new CircleArea(radio);
                     System.out.println("El area del circulo es: " + circleArea.areaCalculate());
-                    scanner2.close();
-
                     break;
                 case 4:
                     double finalPrice;
@@ -55,7 +59,7 @@ public final class Main {
                     System.out.print("Ingrese el valor del producto: ");
                     finalPrice = inputPrice.nextDouble();
                     Product product = new Product(finalPrice);
-                    System.out.print("El precio del producto final es: " + product.calculatePrice());
+                    System.out.println("El precio del producto final es: " + product.calculatePrice());
 
                     break;
                 case 5:
@@ -71,8 +75,12 @@ public final class Main {
                     GreaterZero greaterZero = new GreaterZero();
                     greaterZero.compareNumber();
                 case 8:
-                    Day day = new Day();
-                    day.workingDay();
+
+                    System.out.print("Introduzca un dia de la semana: ");
+                    Scanner scannerDay = new Scanner(System.in);
+                    String day = scannerDay.nextLine().toLowerCase();
+                    Day dayRun = new Day(day);
+                    dayRun.workingDay();
                     break;
                 case 9:
                     Replace replace = new Replace();
@@ -191,15 +199,27 @@ public final class Main {
                     break;
 
                 case 18:
+                    Movie movie = new Movie();
+                    Serie[]     series      = new Serie[5];
+                    Serie[] videojuegos = new Serie[5];
+
+                    movie.completingSeries(series);
+                    movie.completingGames(videojuegos);
+                    movie.deliverSeries(series);
+                    movie.deliverGames(videojuegos);
+                    movie.countSeriesDelivered(series);
+                    movie.countSeriesDelivered(videojuegos);
+                    movie.seriesAndSeason();
+                    movie.hoursGame();
                     break;
-
-
+                case 19:
+                    exit=true;
+                    break;
                 default:
                     System.out.println("Opcion Invalida");
             }
 
+        } while (!exit);
 
         }
-
     }
-
