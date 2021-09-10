@@ -1,4 +1,4 @@
-package co.com.sofka.excercise10;
+package co.com.sofka.exercise10;
 
 import java.util.Scanner;
 

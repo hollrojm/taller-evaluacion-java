@@ -1,4 +1,4 @@
-package co.com.sofka.exercise1;
+package co.com.sofka.exercise2;
 
 public final class Exercise2 {
     double number1;

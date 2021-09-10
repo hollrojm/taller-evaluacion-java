@@ -24,6 +24,5 @@ public final class RunMenu {
             System.out.println("Debes ingresar un numero ENTRE 1 Y 8!!!");
 
         }
-
     }
 }
